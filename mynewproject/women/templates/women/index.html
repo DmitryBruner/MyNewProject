@@ -11,7 +11,7 @@
 				{% if p.photo %}
 				<p><img class="img-article-left thumb" src="{{p.photo.url}}"></p>
 				{% endif %}
-				<h2>{{p.title}}</h2>
+				<a href="{{ p.get_absolute_url }}" style="text-decoration: none;"><h2>{{p.title}}</h2></a>
 	{% autoescape on %}
 	{{p.content|linebreaks|truncatewords:50}}
 	{% endautoescape %}
